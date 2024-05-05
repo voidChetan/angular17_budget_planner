@@ -1,0 +1,109 @@
+<div class="row" id="dashboardDiv"> 
+    <div class="col-12">
+        <div class="tbl_content">
+            <ul class="cards">
+                <li>
+                    <i class="fa fa-suitcase"></i>
+                    <span class="info">
+                        <h3><span>$</span><span class="budget_card">{{dashBoardData?.totalIncome}}</span></h3>
+                        <p>Budget</p>
+                    </span>
+                </li>
+                <li>
+                    <i class="fa fa-credit-card"></i>
+                    <span class="info">
+                        <h3><span>$</span><span class="expenses_card">{{dashBoardData?.totalExpenses}}</span></h3>
+                        <p>Expenses</p>
+                    </span>
+                </li>
+                <li>
+                    <i class="fa fa-dollar"></i>
+                    <span class="info">
+                        <h3><span>$</span><span class="balance_card">{{dashBoardData?.netIncome}}</span></h3>
+                        <p>Balance</p>
+                    </span>
+                </li>
+            </ul>
+            <div class="row">
+                <div class="col-3">
+                     
+                </div>
+                <div class="col-3">
+                    <label for="">From Date</label>
+                    <input type="date" [(ngModel)]="fromDate" class="form-control">
+                </div>
+                <div class="col-3">
+                    <label for="">To Date</label>
+                    <input type="date" [(ngModel)]="toDate" class="form-control" name="" id="">
+                </div>
+                <div class="col-2"> 
+                    <button class="btn btn-success mt-4" (click)="getDashboardData()">Search</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <h6>Category Wise Expense</h6>
+                    <div class="">
+                        <ul class="tbl_tr_content">
+                          <li>1</li>
+                          <li>Gaming Mouse</li>
+                          <li><span>$</span>600</li>
+                         
+                        </ul>
+                        <ul class="tbl_tr_content">
+                            <li>1</li>
+                            <li>Gaming Mouse</li>
+                            <li><span>$</span>600</li>
+                           
+                          </ul>
+                          <ul class="tbl_tr_content">
+                            <li>1</li>
+                            <li>Gaming Mouse</li>
+                            <li><span>$</span>600</li>
+                           
+                          </ul>
+                          <ul class="tbl_tr_content">
+                            <li>1</li>
+                            <li>Gaming Mouse</li>
+                            <li><span>$</span>600</li>
+                           
+                          </ul>
+                          <ul class="tbl_tr_content">
+                            <li>1</li>
+                            <li>Gaming Mouse</li>
+                            <li><span>$</span>600</li>
+                           
+                          </ul>
+                      </div>
+                </div>
+                <div class="col-4">
+                    <h6>Month Wise Expense</h6>
+                    <div class="tbl_data">
+                        <ul class="tbl_tr_content"> 
+                          <li>Jan</li>
+                          <li>  -Gaming Mouse</li>
+                          <li><span></span></li>
+                          <li>$600</li>
+                        </ul>
+                        <ul class="tbl_tr_content"> 
+                            <li>Jan</li>
+                            <li>  -Gaming Mouse</li>
+                            <li><span></span></li>
+                            <li>$600</li>
+                           
+                          </ul>
+                          <ul class="tbl_tr_content"> 
+                            <li>Jan</li>
+                          <li>  -Gaming Mouse</li>
+                          <li><span></span></li>
+                          <li>$600</li>
+                           
+                          </ul>
+                           
+                      </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

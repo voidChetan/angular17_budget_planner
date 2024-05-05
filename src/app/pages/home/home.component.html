@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-12 text-center">
+        <div class="btn-group">
+            <button type="button" [class]="selectedTab == 'Dashboard'?'btn btn-success':'btn btn-primary'"  (click)="changeTab('Dashboard')">Dashboard</button>
+            <button type="button" [class]="selectedTab == 'Expense'?'btn btn-success':'btn btn-primary'" (click)="changeTab('Expense')">Expense</button>
+            <button type="button" [class]="selectedTab == 'Income'?'btn btn-success':'btn btn-primary'"  (click)="changeTab('Income')">Income</button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        @if(selectedTab == 'Dashboard') {
+            <app-dashboard></app-dashboard>
+        } @else if (selectedTab == 'Expense') {
+            <app-expense [masterId]="expenseMasterId"></app-expense>
+        }  @else if (selectedTab == 'Income') {
+            <app-income [masterId]="incomeMasterId"></app-income>
+        }
+      
+        
+       
+    </div>
+</div>

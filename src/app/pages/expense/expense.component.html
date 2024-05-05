@@ -1,0 +1,78 @@
+<div class="row" id="expenseDiv"  >
+    <div class="col-12">
+        <div class="tbl_content">
+            <div class="row">
+                <div class="col-6">
+                    <h3>Expense </h3>
+                </div>
+                <div class="col-6 text-end">
+                    <button class="btn btn-warning"  (click)="openModel()">Add New</button>
+                </div>
+            </div>
+           
+            <div class="tbl_data">
+                @for (item of transcationList; track $index) {
+                    <ul class="tbl_tr_content">
+                        <li>{{$index+1}}</li>
+                        <li>{{item.categoryName}}</li>
+                        <li><span>$</span>{{item.amount}}</li>
+                        <li>
+                            <button type="button" class="btn_edit">Edit</button>
+                            <button type="button" class="btn_delete">Delete</button>
+                        </li>
+                    </ul>
+                }
+               
+                 
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">New Transcation</h4>
+          <button type="button" class="btn-close" (click)="closeModel()"  ></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+           <div class="row">
+            <div class="col-6">
+                <label for="">Date</label>
+               <input type="date" [(ngModel)]="transcationObj.date" class="form-control" placeholder="Date"/>
+            </div>
+            <div class="col-6">
+                <label for="">Select Category</label>
+                <select class="form-select" [(ngModel)]="transcationObj.categoryId">
+                    <option value="">Select</option>
+                    @for (item of categoryList; track $index) {
+                      <option [value]="item.categoryId">{{item.categoryName}}</option>
+                    } 
+                </select>
+            </div>
+            <div class="col-6">
+                <label for="">Amount</label>
+               <input type="number" [(ngModel)]="transcationObj.amount" class="form-control" placeholder="Amount"/>
+            </div>
+            <div class="col-12">
+                <label for="">Purpose</label>
+                <textarea class="form-control" [(ngModel)]="transcationObj.purpose" rows="3" placeholder="Purpose"></textarea>
+            </div>
+           </div>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger"  (click)="closeModel()"  >Close</button>
+          <button type="button" class="btn btn-success" (click)="onSave()">Save</button>
+        </div>
+  
+      </div>
+    </div>
+</div>

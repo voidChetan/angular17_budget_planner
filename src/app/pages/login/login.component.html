@@ -1,0 +1,57 @@
+<div class="parent">
+    <div class="wrapper">
+        <div class="title-text">
+          <div class="title login">Login Form</div>
+          <div class="title signup">Signup Form</div>
+        </div>
+        <div class="form-container">
+          <div class="slide-controls">
+            <input type="radio" name="slide" id="login" checked>
+            <input type="radio" name="slide" id="signup">
+            <label for="login" class="slide login" (click)="isLogin = true">Login</label>
+            <label for="signup" class="slide signup" (click)="isLogin = false">Signup</label>
+            <div class="slider-tab"></div>
+          </div>
+          <div class="form-inner">
+            @if(isLogin) {
+              <form action="#" class="login" > 
+                <div class="field">
+                  <input type="text"  name="userName" [(ngModel)]="loginObj.userName" placeholder="User Name" >
+                </div>
+                <div class="field">
+                  <input type="password"  name="password" [(ngModel)]="loginObj.password" placeholder="Password" >
+                </div>
+                <div class="pass-link"><a href="#">Forgot password?</a></div>
+                <div class="field btn">
+                  <div class="btn-layer"></div>
+                  <input type="button" value="Login" (click)="onLogin()">
+                </div>
+                <div class="signup-link">Not a member? <a  routerLink="/home" routerLinkActive="router-link-active">Signup now</a></div>
+              </form>
+            } @else {
+              <form  class="signup">
+                <div class="field">
+                  <input type="text" name="fullName" [(ngModel)]="register.fullName" placeholder="Full Name" >
+                </div>
+                <div class="field">
+                  <input type="text"  name="emailId" [(ngModel)]="register.emailId" placeholder="Email Address" >
+                </div>
+                <div class="field">
+                  <input type="text"  name="userName" [(ngModel)]="register.userName" placeholder="User Name" >
+                </div>
+                <div class="field">
+                  <input type="password"  name="password" [(ngModel)]="register.password" placeholder="Password" >
+                </div>
+                <div class="field btn">
+                  <div class="btn-layer"></div>
+                  <input type="button" value="Signup" (click)="createUser()">
+                </div>
+              </form>
+            }
+           
+         
+          </div>
+        </div>
+      </div>
+</div>
+
