@@ -1,0 +1,151 @@
+/* You can add global styles to this file, and also import other style files */
+.modal-header { 
+    padding: 5px !important;
+    background-color: #fbc02d !important;
+}
+.modal-footer { 
+    padding: 0px !important; 
+}
+.form-control {
+    border: 2px solid #1a5591 !important;
+}
+.form-select {
+    border: 2px solid #1a5591 !important;
+}
+:root {
+    --light: #f6f6f9;
+    --primary: #1976d2;
+    --light-primary: #cfe8ff;
+    --grey: #fff;
+    --dark-grey: #aaaaaa;
+    --dark: #363949;
+    --danger: #d32f2f;
+    --light-danger: #fecdd3;
+    --warning: #fbc02d;
+    --light-warning: #fff2c6;
+    --success: #388e3c;
+    --light-success: #bbf7d0;
+}
+
+.income-card {
+    background: #94ce96;
+}
+/*================Cards Start================= */
+.container .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 1.5rem;
+    padding: 0rem;
+}
+
+.container .cards li {
+    padding: 0.8rem;
+    background-color: var(--light);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.container .cards li:hover {
+    transform: translateY(-10px);
+}
+
+.container .cards li .fa {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 10px;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .cards li:nth-child(1) .fa {
+    background-color: var(--light-primary);
+    color: var(--primary);
+}
+
+.container .cards li:nth-child(2) .fa {
+    background-color: var(--light-warning);
+    color: var(--warning);
+}
+
+.container .cards li:nth-child(3) .fa {
+    background-color: var(--light-success);
+    color: var(--success);
+}
+
+.container .cards li .info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.container .cards li .info p {
+    color: var(--dark);
+}
+
+/*================Cards Close================= */
+/*==================Start Table Content============= */
+.tbl_content {
+    padding: 2rem;
+    background-color: var(--light);
+    margin: 1rem 2rem;
+    border-radius: 5px;
+}
+
+.tbl_content h3 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.tbl_tr_content {
+    display: grid;
+    list-style-type: none;
+    grid-template-columns: 1fr 50% 30% 2fr;
+    align-items: center;
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    cursor: pointer;
+}
+
+.tbl_data {
+    overflow-y: auto;
+    height: 200px;
+}
+
+.tbl_tr_content button {
+    outline: none;
+    border: none;
+    color: var(--light);
+    padding: 0.4rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--danger);
+}
+body { 
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: -webkit-linear-gradient(left, #003366,#004080,#0059b3
+  , #0073e6);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+.tbl_tr_content button:active {
+    transform: scale(0.98);
+}
+
+.tbl_tr_content button:first-child {
+    background-color: var(--success);
+}
